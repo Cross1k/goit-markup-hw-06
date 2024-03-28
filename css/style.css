@@ -52,9 +52,6 @@ input {
 }
 
 .header {
-  border-bottom: 1px solid #e7e9fc;
-  box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08),
-    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
   margin: 0 auto;
 }
 
@@ -63,7 +60,25 @@ input {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0 15px;
+  padding: 0;
+  width: 288px;
+}
+
+.header-logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #4d5ae5;
+  /* margin-right: 76px; */
+}
+
+.menu-button {
+  padding: 2px;
+  border: none;
+  background-color: transparent;
 }
 
 .header-nav {
@@ -74,42 +89,17 @@ input {
 .header-span {
   color: #2e2f42;
 }
+
 .header-list {
-  display: flex;
-  gap: 40px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
+  display: none;
 }
 
-.current::after {
-  position: absolute;
-  content: "";
-  left: 0;
-  bottom: -1px;
-  width: 100%;
-  height: 4px;
-  background: #404bbf;
-  border-radius: 2px;
-}
-
-.header-link {
-  color: #2e2f42;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.header-link.current {
-  position: relative;
-  color: #404bbf;
-}
-
-.header-link,
 .header-logo {
   padding: 24px 0;
 }
 
 .contact {
+  display: none;
 }
 
 .contact-list {
@@ -135,23 +125,23 @@ input {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/hero-back.jpg);
+    url(../images/hero-bg-mob.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   padding: 72px 0;
-  max-width: 1440px;
+  max-width: 320px;
   background-size: cover;
   margin: 0 auto;
 }
 
 .hero-title {
   font-weight: 700;
-  font-size: 56px;
-  line-height: 1.07;
+  font-size: 36px;
+  line-height: 1.11;
   letter-spacing: 0.02em;
   color: #ffffff;
   text-align: center;
-  max-width: 496px;
+  max-width: 216px;
   margin: 0 auto 72px;
 }
 .hero-button {
@@ -246,7 +236,7 @@ input {
 }
 
 .team-list-item {
-  min-width: 264px;
+  max-width: 264px;
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
@@ -497,9 +487,9 @@ input {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 408px;
+  width: 288px;
   min-height: 584px;
-  padding: 72px 24px 24px 24px;
+  padding: 72px 16px 24px;
   background-color: #fcfcfc;
   border-radius: 4px;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
@@ -557,7 +547,7 @@ input {
   margin-bottom: 16px;
 }
 .modal-form {
-  width: 360px;
+  width: 256px;
 }
 
 .modal-item-wrap {
@@ -615,11 +605,12 @@ input {
 }
 
 .input-modal-textarea {
+  display: block;
   color: rgba(46, 47, 66, 0.4);
   background-color: transparent;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
-  width: 360px;
+  width: 256px;
   height: 120px;
   padding: 8px 16px;
   outline: transparent;
@@ -632,9 +623,6 @@ input {
 }
 
 .input-modal-checkbox {
-  border-radius: 2px;
-  border: 1px solid rgba(46, 47, 66, 0.4);
-  margin-right: 8px;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -649,6 +637,11 @@ input {
 }
 
 .label-modal-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 8px;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
@@ -673,15 +666,17 @@ input {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  margin-right: 8px;
+}
+
+.checkbox-vector {
 }
 
 .checkbox-link {
+  display: flex;
   line-height: 1.33333;
   text-decoration: underline;
   text-decoration-skip-ink: none;
   color: #4d5ae5;
-  margin-left: 4px;
 }
 
 .modal-submit {
@@ -728,7 +723,6 @@ input {
   margin-bottom: 8px;
 }
 
-.header-logo,
 .footer-logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -781,9 +775,65 @@ input {
   .container {
     max-width: 736px;
   }
+  .menu-button {
+    display: none;
+  }
+
+  .header-container {
+    width: 736px;
+  }
+
+  .header-logo {
+    margin-right: 76px;
+  }
+
+  .header-link {
+    color: #2e2f42;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .header-link {
+    padding: 24px 0;
+  }
+
+  .header-link.current {
+    position: relative;
+    color: #404bbf;
+  }
+  .current::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 4px;
+    background: #404bbf;
+    border-radius: 2px;
+  }
+  .header-list {
+    display: flex;
+    gap: 40px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+  }
+
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-bg-tab.jpg);
+    padding: 112px 0;
+    max-width: 768px;
+  }
 
   .hero-title {
-    margin: 0 auto 36px;
+    margin-bottom: 36px;
+    font-size: 56px;
+    line-height: 1.07;
+    max-width: 496px;
   }
 
   .table-subtitle {
@@ -828,6 +878,29 @@ input {
   .portfolio-list-item {
     flex-basis: calc((100% - 24px) / 2);
   }
+
+  .modal {
+    width: 408px;
+    padding: 72px 24px 24px;
+  }
+
+  .modal-form {
+    width: 360px;
+  }
+
+  .label-modal-checkbox {
+    align-items: baseline;
+  }
+
+  .input-modal-textarea {
+    width: 360px;
+  }
+
+  .checkbox-text {
+    display: inline-flex;
+    /* align-items: center; */
+    gap: 4px;
+  }
 }
 
 @media screen and (min-width: 1158px) {
@@ -839,8 +912,24 @@ input {
     padding: 0 15px;
   }
 
+  .header {
+    border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08),
+      0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
+  }
+
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-back.jpg);
+    padding: 188px 0;
+    max-width: 1440px;
+  }
+
   .hero-title {
-    margin: 0 auto 48px;
+    margin-bottom: 48px;
   }
 
   .table-list {
