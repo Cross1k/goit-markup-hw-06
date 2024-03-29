@@ -242,13 +242,25 @@ input {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/hero-gb/hero-bg-mob.jpg);
+    url(../images/hero-bg/hero-bg-mob.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   padding: 72px 0;
   max-width: 320px;
   background-size: cover;
   margin: 0 auto;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-bg/hero-bg-mob-2x.jpg);
+  }
 }
 
 .hero-title {
@@ -893,18 +905,6 @@ input {
   color: #f4f4fd;
 }
 
-@media screen and (min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
-  .hero {
-    background-image: linear-gradient(
-        rgba(46, 47, 66, 0.7),
-        rgba(46, 47, 66, 0.7)
-      ),
-      url(../images/hero-gb/hero-bg-mob-2x.jpg);
-  }
-}
-
 @media screen and (max-width: 767px) {
   .header-container {
     gap: 149px;
@@ -984,12 +984,12 @@ input {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/hero-gb/hero-bg-tab.jpg);
+      url(../images/hero-bg/hero-bg-tab.jpg);
     padding: 112px 0;
     max-width: 768px;
   }
 
-  @media screen and (min-device-pixel-ratio: 2),
+  @media screen and (-webkit-min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     .hero {
@@ -997,7 +997,7 @@ input {
           rgba(46, 47, 66, 0.7),
           rgba(46, 47, 66, 0.7)
         ),
-        url(../images//hero-gb/hero-bg-tab-2x.jpg);
+        url(../images//hero-bg/hero-bg-tab-2x.jpg);
     }
   }
 
@@ -1137,12 +1137,12 @@ input {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/hero-back.jpg);
+      url(../images/hero-bg/hero-back.jpg);
     padding: 188px 0;
     max-width: 1440px;
   }
 
-  @media screen and (min-device-pixel-ratio: 2),
+  @media screen and (-webkit-min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     .hero {
@@ -1150,7 +1150,7 @@ input {
           rgba(46, 47, 66, 0.7),
           rgba(46, 47, 66, 0.7)
         ),
-        url(../images/hero-gb/hero-back-2x.jpg);
+        url(../images/hero-bg/hero-back-2x.jpg);
     }
   }
 
