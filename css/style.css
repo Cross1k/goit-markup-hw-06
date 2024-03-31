@@ -187,10 +187,13 @@ input {
 }
 
 .header-menu-wrap {
-  display: flex;
 }
 
 .header-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 40px;
 }
 
 .header-menu-item {
@@ -204,6 +207,10 @@ input {
   text-transform: capitalize;
   color: #2e2f42;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.header-menu-link.current,
+.header-contact-info.current {
+  color: #404bbf;
 }
 
 .header-menu-link:active,
@@ -249,7 +256,7 @@ input {
   background-repeat: no-repeat;
   background-position: center center;
   padding: 72px 0;
-  max-width: 320px;
+
   background-size: cover;
   margin: 0 auto;
 }
@@ -471,12 +478,11 @@ input {
   border-top: none;
 }
 .footer {
+  padding: 96px 0;
   background-color: #2e2f42;
 }
 
 .footer-wrapper {
-  padding: 96px 0;
-  width: 288px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -944,6 +950,7 @@ input {
     position: relative;
     color: #404bbf;
   }
+
   .current::after {
     position: absolute;
     content: "";
@@ -988,7 +995,6 @@ input {
       ),
       url(../images/hero-bg/hero-bg-tab.jpg);
     padding: 112px 0;
-    max-width: 768px;
   }
 
   @media screen and (-webkit-min-device-pixel-ratio: 2),
@@ -1074,10 +1080,9 @@ input {
   }
 
   .footer-wrapper {
-    width: 736px;
+    width: 584px;
     flex-direction: row;
     flex-wrap: wrap;
-    padding-left: 108px;
     gap: 72px 24px;
     align-items: start;
   }
@@ -1201,9 +1206,11 @@ input {
     flex-basis: calc((100% - 2 * 24px) / 3);
   }
 
-  .footer-wrapper {
-    width: 1128px;
+  .footer {
     padding: 100px 0;
+  }
+
+  .footer-wrapper {
     gap: 0;
   }
 
