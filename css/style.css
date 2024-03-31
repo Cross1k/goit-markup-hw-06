@@ -1079,7 +1079,7 @@ input {
   }
 
   .footer-wrapper {
-    width: 584px;
+    max-width: 584px;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 72px 24px;
